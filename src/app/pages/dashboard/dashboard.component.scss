@@ -1,0 +1,166 @@
+main {
+    flex: 1;
+    grid-area: main;
+    padding: 2rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+
+    background-color: #f4f7fa;
+    h2{
+        margin-bottom: 1rem;
+    }
+  }
+
+.card {
+    height: 100%;
+    padding: 1rem;
+    font-size: 2rem;
+    font-weight: 300;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.btn {
+    display: inline-block;
+    border-radius: 5em;
+    border: 0;
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+
+    &--primary {
+        color: #fff;
+        background-color: #56bf89;
+    }
+}
+
+.ticker {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+        margin-right: 1rem;
+    }
+}
+
+
+.dashboard {
+    --column-count: 2;
+
+    // Flexbox Fallback
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 calc(2rem * -0.5);
+
+    // Grid
+    display: grid;
+    grid-template-columns: repeat(var(--column-count), 1fr);
+    grid-gap: 2rem;
+
+    &__item {
+        // By default, items span 2 columns
+        flex: 1 1 50%;
+        grid-column-end: span 2;
+        padding: calc(2rem / 2);
+
+        // these span the full width
+        &--full {
+            flex-basis: 100%;
+            grid-column: 1 / -1;
+        }
+
+        // these span only one column
+        &--col {
+            flex-basis: calc(100% / var(--column-count));
+            grid-column-end: span 1;
+        }
+    }
+
+    // Switch to 4-col grid on larger screens
+    @media screen and (min-width: 48rem) {
+        --column-count: 4;
+    }
+
+    @supports (display: grid) {
+        margin: 0;
+
+        &__item {
+            padding: 0;
+        }
+    }
+}
+
+
+a {
+    color: #dc5a60;
+    text-decoration: none;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+
+  
+  
+  .menu {
+    list-style-type: none;
+    padding: 0;
+  
+    &__item {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    }
+    &__link {
+      display: block;
+      padding: 1rem 2rem;
+      color: #76808f;
+      text-decoration: none;
+  
+      &:hover,
+      &:focus {
+        color: #fff;
+        background-color: #1f222d;
+      }
+    }
+  }
+  
+  .card {
+    height: 100%;
+    padding: 1rem;
+    font-size: 2rem;
+    font-weight: 300;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
+  
+  .btn {
+    display: inline-block;
+    border-radius: 5em;
+    border: 0;
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+  
+    &--primary {
+      color: #fff;
+      background-color: #56bf89;
+    }
+  }
+  
+  .ticker {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+  
+    &__item {
+      margin-right: 1rem;
+    }
+  }
+  

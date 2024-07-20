@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from './services/login.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -10,10 +11,13 @@ export class AppComponent  {
 
   title = 'chatbot';
 
-  constructor(private authService: LoginService) {}
+  constructor(private authService: LoginService, private router
+  : Router
+  ) {}
 
   authenticated(): boolean {
-    console.log(this.authService.authenticated());
-    return this.authService.authenticated();
+    let bolean: boolean = this.authService.authenticated();
+    return bolean;
   }
+  
 }
