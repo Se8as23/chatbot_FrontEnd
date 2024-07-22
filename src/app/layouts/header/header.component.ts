@@ -15,4 +15,8 @@ export class HeaderComponent implements OnInit{
     this.nombre = localStorage.getItem('token') ?? '';
   }
 
+  logout(){
+    localStorage.removeItem('token');
+  }
+
 }

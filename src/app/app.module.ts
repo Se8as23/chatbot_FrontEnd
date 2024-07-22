@@ -28,7 +28,6 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule
-
   ],
   providers: [],
   bootstrap: [AppComponent]

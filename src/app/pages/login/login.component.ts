@@ -4,6 +4,7 @@ import { LoginService } from '../../services/login.service';
 import { Register } from '../../model/Register.';
 import { ViewsService } from '../../services/views.service';
 import { Router } from '@angular/router';
+import { LoginResponse } from '../../model/LoginResponse';
 
 @Component({
   selector: 'app-login',
@@ -13,6 +14,7 @@ import { Router } from '@angular/router';
 export class LoginComponent {
 
   user: User = new User();
+  loginResponse: LoginResponse = new LoginResponse();
   showRegisterForm$ = this.viewService.showRegisterForm$;
 
 
@@ -21,9 +23,18 @@ export class LoginComponent {
   ) { }
 
   login() {
-    console.log(this.user);
-    localStorage.setItem('token', this.user.username ?? '');
-    this.router.navigate(['/home']);
+    this.loginService.login(this.user.username! , this.user.password!).subscribe(
+      (data: LoginResponse) => {
+        this.loginResponse = data;
+        console.log(this.loginResponse);
+        localStorage.setItem('token', this.loginResponse.nombre ?? '');
+      }
+    );
+
+  
+    // console.log(this.user);
+    // localStorage.setItem('token', this.user.username ?? '');
+    // this.router.navigate(['/home']);
   }
 
   authenticated() {
