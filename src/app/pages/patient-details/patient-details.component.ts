@@ -11,15 +11,23 @@ import { PatientService } from '../../services/patient.service';
 export class PatientDetailsComponent implements OnInit {
 
   patient: Patient | undefined;
-  
+
   constructor(private route: ActivatedRoute, private patientService: PatientService) {}
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
       const cedula = params.get('cedula');
-      if (cedula !== null) {
-        this.patient = this.patientService.getPatient(cedula);
+      if (cedula) {
+        this.patientService.getPatients().subscribe(patients => {
+          this.patient = patients.find(p => p.cedula === cedula);
+        });
       }
+    });
+  }
+
+  public updatePatient(patient: Patient): void {
+    this.patientService.updatePatient(patient).subscribe(data => {
+      console.log(data);
     });
   }
 

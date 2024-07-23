@@ -1,4 +1,5 @@
 export class Patient{
+    id? : number;
     cedula?: string;
     nombres?: string;
     apellidos?: string;
@@ -9,5 +10,6 @@ export class Patient{
     peso?: number;
     entredomidas?: string;
     comidascaloricas?: boolean;
-    prediagnostico?: string;
+    prediacnostico?: string;
+    recomendacion?: string;
 }

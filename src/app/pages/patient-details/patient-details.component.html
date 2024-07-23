@@ -11,8 +11,10 @@
       <p><strong>Peso:</strong> {{ patient.peso }} kg</p>
       <p><strong>Entre Comidas:</strong> {{ patient.entredomidas }}</p>
       <p><strong>Comidas Calóricas:</strong> {{ patient.comidascaloricas ? 'Sí' : 'No' }}</p>
-      <p><strong>Prediagnóstico:</strong></p>
-      <textarea [(ngModel)]="patient.prediagnostico" rows="3" placeholder="Ingrese el prediagnóstico"></textarea>
+      <p><strong>Prediagnostico:</strong> {{ patient.prediacnostico }}</p>
+      <p><strong>Recomendacion:</strong></p>
+      <textarea [(ngModel)]="patient.recomendacion" rows="3" placeholder="Ingrese la recomendacion"></textarea>
+      <button class="update-button" (click)="updatePatient(this.patient)">Actualizar</button>
     </div>
   </div>
   
