@@ -14,6 +14,8 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { HeaderUserComponent } from './layouts/User/header-user/header-user.component';
 import { FooterUserComponent } from './layouts/User/footer-user/footer-user.component';
 import { IndexComponent } from './layouts/User/index/index.component';
+import { UsersComponent } from './pages/users/users.component';
+import { PatientDetailsComponent } from './pages/patient-details/patient-details.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { IndexComponent } from './layouts/User/index/index.component';
     HeaderUserComponent,
     FooterUserComponent,
     IndexComponent,
+    UsersComponent,
+    PatientDetailsComponent,
     
   ],
   imports: [

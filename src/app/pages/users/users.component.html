@@ -1,0 +1,9 @@
+<div class="card-container">
+    <div *ngFor="let patient of patients" class="card" (click)="goToDetails(patient)">
+      <h2>{{ patient.nombres }} {{ patient.apellidos }}</h2>
+      <p><strong>Cédula:</strong> {{ patient.cedula }}</p>
+      <p><strong>Edad:</strong> {{ patient.edad }}</p>
+      <p><strong>Teléfono:</strong> {{ patient.telefono }}</p>
+    </div>
+  </div>
+  
