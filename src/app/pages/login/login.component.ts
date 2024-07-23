@@ -19,7 +19,7 @@ export class LoginComponent {
 
 
   constructor(private loginService: LoginService, private viewService: ViewsService
-    , private router: Router
+    , private router: Router, public viewsService: ViewsService
   ) { }
 
   login() {

@@ -5,6 +5,11 @@
     height: 100vh;
 }
 
+.text{  
+    margin-top: 10px;
+    text-align: center;
+}
+
 .form-container{
     width: 25%;
     min-width: 400px;
@@ -42,7 +47,7 @@
 }
 
 .buttons-group{
-    margin-top: 20px;
+    margin-top: 15px;
     button{
         display: block;
         width: 100%;
@@ -51,7 +56,7 @@
         border: none;
         transition: all 0.5s;
         border: 1px solid#1c7f98;
-        margin-top: 12px ;
+        margin-top: 8px ;
     }
 }
 

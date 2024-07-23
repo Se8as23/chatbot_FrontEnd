@@ -1,0 +1,99 @@
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+  }
+
+  .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    h2{
+        color: #fff;
+        margin: 0;
+    }
+  }
+  
+  .logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    img{
+        width: 35%;    
+    }
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    color: #fff;
+    .session{
+      cursor: pointer;
+    }
+  }
+  
+  .nav-links li {
+    margin: 0 15px;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    
+  }
+  
+  .burger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+  }
+
+  
+  /* Media Queries for Responsive Design */
+  @media screen and (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: #333;
+    }
+  
+    .nav-links li {
+      text-align: center;
+      margin: 10px 0;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  }

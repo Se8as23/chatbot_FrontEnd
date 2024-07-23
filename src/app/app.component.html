@@ -9,5 +9,8 @@
     </div>
 </div>
 <ng-template #login>
-    <app-login></app-login>
+    <app-header-user *ngIf="viewsService.showHeader" />
+    <app-index *ngIf="viewsService.showIndex"></app-index>
+    <app-login *ngIf="viewsService.showLogin"></app-login>
+    <app-footer-user *ngIf="viewsService.showFooter" />
 </ng-template>

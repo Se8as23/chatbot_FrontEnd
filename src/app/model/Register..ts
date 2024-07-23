@@ -1,10 +1,10 @@
 export class Register{
-    identification?: string;
-    name?: string;
-    lastname?: string;
-    password?: string;
-    phone?: string;
-    email?: string;
-    age?: string;
-    gender?: string;
+    // identification?: string;
+    nombre?: string;
+    // lastname?: string;
+    pass?: string;
+    // phone?: string;
+    // email?: string;
+    // age?: string;
+    // gender?: string;
 }
