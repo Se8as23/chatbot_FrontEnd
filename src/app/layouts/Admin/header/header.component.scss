@@ -99,11 +99,17 @@ img {
   border: 0;
   padding: 0.5rem 1rem;
   white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.3s;
 
   &--primary {
     color: #fff;
     background-color: #1c7f98;
   }
+}
+
+.btn:hover {
+  background-color: #1f222d;
 }
 
 .ticker {

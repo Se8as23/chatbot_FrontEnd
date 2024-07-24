@@ -28,6 +28,7 @@ export class LoginComponent {
         this.loginResponse = data;
         console.log(this.loginResponse);
         localStorage.setItem('token', this.loginResponse.nombre ?? '');
+        localStorage.setItem('id', this.loginResponse.id!.toString());
       }
     );
 

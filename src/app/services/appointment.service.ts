@@ -13,4 +13,8 @@ export class AppointmentService {
   getAppointments() {
     return this.http.get<Appointment[]>(`${environment.api}turnos/list`);
   }
+
+  saveAppointment(appointment: Appointment) {
+    return this.http.post(`${environment.api}turnos/save`, appointment);
+  }
 }

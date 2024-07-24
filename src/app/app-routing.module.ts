@@ -7,6 +7,7 @@ import { PatientComponent } from './pages/patient/patient.component';
 import { AppointmentDetailsComponent } from './pages/appointment-details/appointment-details.component';
 import { AppointmentComponent } from './pages/appointment/appointment.component';
 import { SoonComponent } from './pages/soon/soon.component';
+import { AppointmentGeneratorComponent } from './pages/appointment-generator/appointment-generator.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'patient-details/:cedula', component: PatientDetailsComponent },
   { path: 'appointments', component: AppointmentComponent },
   { path: 'appointment-details/:id', component: AppointmentDetailsComponent },
+  { path: 'appointment-generator', component: AppointmentGeneratorComponent },
   { path: 'soon', component: SoonComponent }
 
 

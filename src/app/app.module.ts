@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
 import { HeaderComponent } from './layouts/Admin/header/header.component';
 import { FooterComponent } from './layouts/Admin/footer/footer.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SidebarComponent } from './layouts/Admin/sidebar/sidebar.component';
 import { SigninComponent } from './pages/signin/signin.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
@@ -19,6 +19,7 @@ import { AppointmentComponent } from './pages/appointment/appointment.component'
 import { AppointmentDetailsComponent } from './pages/appointment-details/appointment-details.component';
 import { PatientComponent } from './pages/patient/patient.component';
 import { SoonComponent } from './pages/soon/soon.component';
+import { AppointmentGeneratorComponent } from './pages/appointment-generator/appointment-generator.component';
 
 @NgModule({
   declarations: [
@@ -37,13 +38,15 @@ import { SoonComponent } from './pages/soon/soon.component';
     AppointmentDetailsComponent,
     PatientComponent,
     SoonComponent,
+    AppointmentGeneratorComponent,
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

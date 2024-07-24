@@ -21,6 +21,6 @@ export class PatientService {
   }
 
   updatePatient(patient: Patient){
-    return this.http.put(environment.api + 'usuarios/update', patient);
+    return this.http.post(environment.api + 'usuarios/update', patient);
   }
 }

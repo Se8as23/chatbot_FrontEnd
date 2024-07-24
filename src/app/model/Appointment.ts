@@ -3,9 +3,9 @@ import { Time } from "@angular/common";
 export class Appointment {
 
     id?: number;
-    fecha?: Date;
+    fecha?: string;
     hora?: string; // Angular does not have a Time type, so we'll use string
-    id_usuario?: number
+    cedula?: string
     id_medico?: number;
     estado?: boolean;
 
