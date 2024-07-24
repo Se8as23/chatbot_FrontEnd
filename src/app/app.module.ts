@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { BaseChartDirective } from 'ng2-charts'; // Import ChartsModule
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -46,9 +48,10 @@ import { AppointmentGeneratorComponent } from './pages/appointment-generator/app
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BaseChartDirective
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [BaseChartDirective],
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

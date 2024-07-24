@@ -10,6 +10,6 @@ export class Patient{
     peso?: number;
     entredomidas?: string;
     comidascaloricas?: boolean;
-    prediacnostico?: string;
+    prediagnostico?: string;
     recomendacion?: string;
 }

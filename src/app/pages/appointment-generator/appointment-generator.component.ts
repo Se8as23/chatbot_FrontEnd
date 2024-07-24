@@ -20,7 +20,7 @@ export class AppointmentGeneratorComponent implements OnInit {
     this.appointmentForm = this.fb.group({
       fecha: ['', Validators.required],
       hora: ['', Validators.required],
-      cedula: ['', Validators.required],
+      cedula: ['0000000001'],
     });
   }
 

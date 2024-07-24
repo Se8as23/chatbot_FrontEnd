@@ -1,33 +1,33 @@
-<main class="admin__main">
-    <h2>Dashboard</h2>
-    <div class="dashboard">
-      <div class="dashboard__item">
-        <div class="card">
-          <strong>41</strong> Foobars
-        </div>
-      </div>
-      <div class="dashboard__item">
-        <div class="card">
-          <strong>81.712</strong> Doohickeys
-        </div>
-      </div>
-      <div class="dashboard__item dashboard__item--full">
-        <div class="card">
-          <img src="https://imgs.xkcd.com/comics/decline.png" alt="" />
-        </div>
-      </div>
-      <div class="dashboard__item dashboard__item--col">
-        <div class="card">A</div>
-      </div>
-      <div class="dashboard__item dashboard__item--col">
-        <div class="card">B</div>
-      </div>
-      <div class="dashboard__item dashboard__item--col">
-        <div class="card">C</div>
-      </div>
-      <div class="dashboard__item dashboard__item--col">
-        <div class="card">D</div>
+<div class="chart-container">
+  <h1 class="dashboard-title">Dashboard</h1>
+  <div class="chart-row">
+    <div class="chart-item left">
+      <canvas baseChart [datasets]="ageChartData" [labels]="ageChartLabels" [options]="ageChartOptions" [legend]="true"></canvas>
+      <div class="chart-description">
+        <h2>Generación de Gráficas</h2>
+        <p>Visita gráficos en tiempo real sobre los pacientes</p>
+        <p>El gráfico muestra la cantidad de pacientes en función de sus edades.</p>
       </div>
     </div>
-    <p>read more about this in <a href="https://mxb.at/blog/css-grid-admin-dashboard/">this blogpost</a>.</p>
-  </main>
+  </div>
+  <div class="chart-row">
+    <div class="chart-item right">
+      <canvas baseChart [datasets]="caloricChartData" [labels]="caloricChartLabels" [options]="caloricChartOptions" [legend]="true"></canvas>
+      <div class="chart-description">
+        <h2>Identifica Patrones</h2>
+        <p>Identifica patrones en pacientes para tomar decisiones</p>
+        <p>El gráfico muestra la proporción de comidas calóricas.</p>
+      </div>
+    </div>
+  </div>
+  <div class="chart-row">
+    <div class="chart-item left">
+      <canvas baseChart [datasets]="heightWeightChartData" [labels]="heightWeightChartLabels" [options]="heightWeightChartOptions" [legend]="true"></canvas>
+      <div class="chart-description">
+        <h2>Visualiza todo en un solo lugar</h2>
+        <p>Visualiza la información relevante en un solo lugar</p>
+        <p>El gráfico muestra la relación entre la altura y el peso de los pacientes.</p>
+      </div>
+    </div>
+  </div>
+</div>
