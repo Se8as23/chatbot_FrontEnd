@@ -1,1 +1,16 @@
-<router-outlet />
+<div *ngIf="authenticated(); else login">
+    <div class="layout-container">
+        <app-header></app-header>
+        <app-sidebar></app-sidebar>
+        <div>
+            <router-outlet></router-outlet>
+        </div>
+        <app-footer></app-footer>
+    </div>
+</div>
+<ng-template #login>
+    <app-header-user *ngIf="viewsService.showHeader" />
+    <app-index *ngIf="viewsService.showIndex"></app-index>
+    <app-login *ngIf="viewsService.showLogin"></app-login>
+    <app-footer-user *ngIf="viewsService.showFooter" />
+</ng-template>

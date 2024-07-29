@@ -1,0 +1,45 @@
+$admin-header-height: 70px;
+$admin-footer-height: 70px;
+$admin-nav-width: 250px;
+
+.layout-container {
+    --spacing: 1rem;
+  
+    // Flexbox Fallback
+    display: flex;
+    flex-wrap: wrap;
+  
+    // Grid
+    display: grid;
+    height: 100vh;
+  
+    grid-template-rows:     $admin-header-height 1fr $admin-footer-height;
+    grid-template-columns:  $admin-nav-width 1fr;
+    grid-template-areas:    "header header"
+                            "nav    main"
+                            "footer footer";
+}
+
+
+app-header {
+    grid-area: header;
+    background-color: #f8f9fa; /* Color de ejemplo */
+}
+
+app-sidebar {
+    grid-area: nav;
+    width: 200px;
+    background-color: #343a40; /* Color de ejemplo */
+    color: white; /* Texto blanco para visibilidad */
+}
+
+router-outlet {
+    grid-area: main;
+    padding: var(--spacing);
+    background-color: #ffffff; /* Color de ejemplo */
+}
+
+app-footer {
+    grid-area: footer;
+    background-color: #f8f9fa; /* Color de ejemplo */
+}

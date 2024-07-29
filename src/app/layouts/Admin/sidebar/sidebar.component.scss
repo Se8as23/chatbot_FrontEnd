@@ -1,0 +1,27 @@
+nav {
+    flex: 0 0 250px;
+    grid-area: nav;
+    background-color: #313541;
+
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+  
+    &__item {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    }
+    &__link {
+      display: block;
+      padding: 1rem 2rem;
+      color: #76808f;
+      text-decoration: none;
+  
+      &:hover,
+      &:focus {
+        color: #fff;
+        background-color: #1f222d;
+      }
+    }
+  }

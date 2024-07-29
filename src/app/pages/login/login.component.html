@@ -1,3 +1,25 @@
-<div>
-    
+<div class="global-login-container">
+    <div class="form-container" *ngIf="!(showRegisterForm$ | async); else registerForm">
+        <div class="logo-container">
+            <img src="../../../assets/img/logo.png" alt="">
+        </div>
+        <form (ngSubmit)="login()">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" name="username" [(ngModel)]="user.username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" name="password" [(ngModel)]="user.password" required>
+            </div>
+            <div class="buttons-group">
+                <button type="submit" class="btn btn-primary">Login</button>
+                <button type="button" class="btn btn-primary" (click)="showRegister()">Registrarme</button>
+                <button type="button" class="btn btn-primary" (click)="viewsService.toggleToIndex()">Regresar</button>
+            </div>
+        </form>
+    </div>
+    <ng-template #registerForm>
+        <app-signin />
+    </ng-template>
 </div>

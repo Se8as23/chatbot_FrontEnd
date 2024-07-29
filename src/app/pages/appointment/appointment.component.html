@@ -1,0 +1,11 @@
+<div class="card-container">
+    <div *ngFor="let appointment of appointments" class="card" (click)="goToDetails(appointment)">
+      <h2>Cita con ID: {{ appointment.id }}</h2>
+      <p><strong>Fecha:</strong> {{ appointment.fecha | date: 'fullDate' }}</p>
+      <p><strong>Hora:</strong> {{ appointment.hora }}</p>
+      <p><strong>ID Usuario:</strong> {{ appointment.cedula }}</p>
+      <p><strong>ID Médico:</strong> {{ appointment.id_medico }}</p>
+      <p><strong>Estado:</strong> {{ appointment.estado ? 'Confirmada' : 'Pendiente' }}</p>
+    </div>
+  </div>
+  

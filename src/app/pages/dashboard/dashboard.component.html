@@ -1,0 +1,33 @@
+<div class="chart-container">
+  <h1 class="dashboard-title">Dashboard</h1>
+  <div class="chart-row">
+    <div class="chart-item left">
+      <canvas baseChart [datasets]="ageChartData" [labels]="ageChartLabels" [options]="ageChartOptions" [legend]="true"></canvas>
+      <div class="chart-description">
+        <h2>Generación de Gráficas</h2>
+        <p>Visita gráficos en tiempo real sobre los pacientes</p>
+        <p>El gráfico muestra la cantidad de pacientes en función de sus edades.</p>
+      </div>
+    </div>
+  </div>
+  <div class="chart-row">
+    <div class="chart-item right">
+      <canvas baseChart [datasets]="caloricChartData" [labels]="caloricChartLabels" [options]="caloricChartOptions" [legend]="true"></canvas>
+      <div class="chart-description">
+        <h2>Identifica Patrones</h2>
+        <p>Identifica patrones en pacientes para tomar decisiones</p>
+        <p>El gráfico muestra la proporción de comidas calóricas.</p>
+      </div>
+    </div>
+  </div>
+  <div class="chart-row">
+    <div class="chart-item left">
+      <canvas baseChart [datasets]="heightWeightChartData" [labels]="heightWeightChartLabels" [options]="heightWeightChartOptions" [legend]="true"></canvas>
+      <div class="chart-description">
+        <h2>Visualiza todo en un solo lugar</h2>
+        <p>Visualiza la información relevante en un solo lugar</p>
+        <p>El gráfico muestra la relación entre la altura y el peso de los pacientes.</p>
+      </div>
+    </div>
+  </div>
+</div>

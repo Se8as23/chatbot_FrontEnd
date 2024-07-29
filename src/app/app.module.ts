@@ -1,26 +1,57 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { BaseChartDirective } from 'ng2-charts'; // Import ChartsModule
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
-import { HeaderComponent } from './layouts/header/header.component';
-import { FooterComponent } from './layouts/footer/footer.component';
+import { HeaderComponent } from './layouts/Admin/header/header.component';
+import { FooterComponent } from './layouts/Admin/footer/footer.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SidebarComponent } from './layouts/Admin/sidebar/sidebar.component';
+import { SigninComponent } from './pages/signin/signin.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { HeaderUserComponent } from './layouts/User/header-user/header-user.component';
+import { FooterUserComponent } from './layouts/User/footer-user/footer-user.component';
+import { IndexComponent } from './layouts/User/index/index.component';
+import { PatientDetailsComponent } from './pages/patient-details/patient-details.component';
+import { AppointmentComponent } from './pages/appointment/appointment.component';
+import { AppointmentDetailsComponent } from './pages/appointment-details/appointment-details.component';
+import { PatientComponent } from './pages/patient/patient.component';
+import { SoonComponent } from './pages/soon/soon.component';
+import { AppointmentGeneratorComponent } from './pages/appointment-generator/appointment-generator.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     LoginComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    SidebarComponent,
+    SigninComponent,
+    DashboardComponent,
+    HeaderUserComponent,
+    FooterUserComponent,
+    IndexComponent,
+    PatientDetailsComponent,
+    AppointmentComponent,
+    AppointmentDetailsComponent,
+    PatientComponent,
+    SoonComponent,
+    AppointmentGeneratorComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    BaseChartDirective
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [BaseChartDirective],
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
