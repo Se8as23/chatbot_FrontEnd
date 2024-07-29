@@ -8,7 +8,7 @@ export class Patient{
     edad?: number;
     altura?: number;
     peso?: number;
-    entredomidas?: string;
+    entrecomidas?: string;
     comidascaloricas?: boolean;
     prediagnostico?: string;
     recomendacion?: string;

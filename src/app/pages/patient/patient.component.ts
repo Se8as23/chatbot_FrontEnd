@@ -17,6 +17,7 @@ export class PatientComponent {
   ngOnInit(): void {
     this.patientService.getPatients().subscribe(data => {
       this.patients = data;
+      console.log(data);
     });
   }
 

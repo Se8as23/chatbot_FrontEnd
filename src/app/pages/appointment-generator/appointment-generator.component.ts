@@ -35,7 +35,7 @@ export class AppointmentGeneratorComponent implements OnInit {
         fecha: this.formatDate(this.appointmentForm.value.fecha),
         hora: this.formatTime(this.appointmentForm.value.hora),
         id_medico: localStorage.getItem('id') ?? '',
-        estado: false
+        estado: true
       };
       this.apointmentService.saveAppointment(appointment).subscribe(data => {
         console.log(data);

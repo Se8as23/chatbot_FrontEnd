@@ -1,20 +1,20 @@
-<div class="patient-details-container" *ngIf="patient">
-    <h1>Detalles del Paciente</h1>
-    <p class="description">Aquí podrá observar y actualizar el estado del paciente.</p>
-    <div class="patient-info">
-      <h2>{{ patient.nombres }} {{ patient.apellidos }}</h2>
-      <p><strong>Cédula:</strong> {{ patient.cedula }}</p>
-      <p><strong>Edad:</strong> {{ patient.edad }}</p>
-      <p><strong>Teléfono:</strong> {{ patient.telefono }}</p>
-      <p><strong>Correo:</strong> {{ patient.correo }}</p>
-      <p><strong>Altura:</strong> {{ patient.altura }} m</p>
-      <p><strong>Peso:</strong> {{ patient.peso }} kg</p>
-      <p><strong>Entre Comidas:</strong> {{ patient.entredomidas }}</p>
-      <p><strong>Comidas Calóricas:</strong> {{ patient.comidascaloricas ? 'Sí' : 'No' }}</p>
-      <p><strong>Prediagnostico:</strong> {{ patient.prediagnostico }}</p>
-      <p><strong>Recomendacion:</strong></p>
-      <textarea [(ngModel)]="patient.recomendacion" rows="3" placeholder="Ingrese la recomendacion"></textarea>
-      <button class="update-button" (click)="updatePatient(this.patient)">Actualizar</button>
-    </div>
+<div class="patient-details-container" *ngIf="patient" id="patient-details">
+  <h1>Detalles del Paciente</h1>
+  <p class="description">Aquí podrá observar y actualizar el estado del paciente.</p>
+  <div class="patient-info">
+    <h2>{{ patient.nombres }} {{ patient.apellidos }}</h2>
+    <p><strong>Cédula:</strong> {{ patient.cedula }}</p>
+    <p><strong>Edad:</strong> {{ patient.edad }}</p>
+    <p><strong>Teléfono:</strong> {{ patient.telefono }}</p>
+    <p><strong>Correo:</strong> {{ patient.correo }}</p>
+    <p><strong>Altura:</strong> {{ patient.altura }} m</p>
+    <p><strong>Peso:</strong> {{ patient.peso }} kg</p>
+    <p><strong>Entre Comidas:</strong> {{ patient.entrecomidas }}</p>
+    <p><strong>Comidas Calóricas:</strong> {{ patient.comidascaloricas ? 'Sí' : 'No' }}</p>
+    <p><strong>Prediagnostico:</strong> {{ patient.prediagnostico }}</p>
+    <p><strong>Recomendacion:</strong></p>
+    <textarea [(ngModel)]="patient.recomendacion" rows="3" placeholder="Ingrese la recomendacion"></textarea>
+    <button class="update-button" (click)="updatePatient(patient)">Actualizar</button>
+    <button class="download-button" (click)="downloadPDF()">Descargar PDF</button>
   </div>
-  
+</div>
